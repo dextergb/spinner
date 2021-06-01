@@ -1,15 +1,14 @@
 const spinners = ['\r|   ', "\r/   ",'\r-   ', '\r\\   ', '\r|   ']
-let spinner = (spinners) => {
+let spinner = () => {
   let seconds = 100;
   for (let spin of spinners) {
     setTimeout(() => {
       process.stdout.write(spin);
-    }, seconds);
-    seconds += 200;
+    }, seconds += 200);
   }
 };
 
-spinner(spinners);
+spinner();
 
 // setTimeout(() => {
 //   process.stdout.write('\r/   ');
